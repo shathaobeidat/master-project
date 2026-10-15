@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore services | Fiesta</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/services.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-hero">
+        <div class="eyebrow">Fiesta marketplace</div>
+        <h1>Find your perfect team</h1>
+        <p>Explore talented, trusted event professionals and see who is available for your celebration.</p>
+      </div>
+      <div class="market-layout">
+        <aside class="filters" aria-label="Filter services">
+          <div><strong>Filter services</strong><button type="button" id="clear-all">Clear all</button></div>
+          <label>Search<input type="search" id="f-query" placeholder="Service or vendor name"></label>
+          <label>Category<select id="f-category"></select></label>
+          <label>Event type<select id="f-event"></select></label>
+          <label>Governorate<select id="f-governorate"></select></label>
+        </aside>
+        <section class="results">
+          <div class="results-top">
+            <span id="results-count"><strong>0</strong> services found</span>
+            <label>Sort by <select id="f-sort"><option>Recommended</option><option>Price: low to high</option><option>Highest rated</option></select></label>
+          </div>
+          <div id="results-body"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/shared/data.js"></script>
+  <script src="js/shared/icons.js"></script>
+  <script src="js/shared/store.js"></script>
+  <script src="js/shared/utils.js"></script>
+  <script src="js/shared/components.js"></script>
+  <script src="js/shared/layout.js"></script>
+  <script src="js/pages/services.js"></script>
+</body>
+</html>

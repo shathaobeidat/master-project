@@ -1,0 +1,36 @@
+/* Vendor area shell: sidebar + workspace, separate from the customer site chrome. */
+.vendor-gate { max-width: 760px; margin: 0 auto; padding: 70px 24px 90px; min-height: 60vh; }
+.vshell { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; background: var(--ivory); }
+.vside { background: var(--plum-dark); color: var(--white); padding: 30px 22px; display: flex; flex-direction: column; gap: 36px; position: sticky; top: 0; height: 100vh; }
+.vbrand { color: var(--white); align-items: baseline; }
+.vbrand span { background: var(--white); color: var(--plum); align-self: center; }
+.vbrand small { font: 600 10px "DM Sans", sans-serif; letter-spacing: 1.8px; text-transform: uppercase; color: var(--champagne); margin-left: 8px; }
+.vnav { display: flex; flex-direction: column; gap: 4px; }
+.vnav a { display: flex; align-items: center; gap: 12px; padding: 12px 14px; color: color-mix(in srgb, var(--white), transparent 30%); font-size: 14px; font-weight: 500; border-left: 3px solid transparent; }
+.vnav a:hover { background: color-mix(in srgb, var(--white), transparent 92%); color: var(--white); }
+.vnav a.is-current { background: color-mix(in srgb, var(--white), transparent 88%); color: var(--white); border-left-color: var(--champagne); }
+.vnav-count { margin-left: auto; min-width: 22px; height: 22px; padding: 0 6px; display: grid; place-items: center; background: var(--champagne); color: var(--plum-dark); border-radius: 99px; font-size: 11px; font-weight: 700; }
+.vside-foot { margin-top: auto; display: flex; flex-direction: column; gap: 12px; font-size: 13px; }
+.vbusiness { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding-bottom: 14px; border-bottom: 1px solid color-mix(in srgb, var(--white), transparent 82%); }
+.vbusiness strong { font: 500 18px "Playfair Display", serif; }
+.vside-foot a, .vside-foot button { color: color-mix(in srgb, var(--white), transparent 30%); background: none; border: 0; padding: 4px 0; text-align: left; text-decoration: underline; font-size: 13px; }
+.vside-foot a:hover, .vside-foot button:hover { color: var(--white); }
+.vmain { padding: 44px 52px 90px; min-width: 0; }
+.vtop { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 34px; flex-wrap: wrap; }
+.vtop h1 { color: var(--plum); font-size: 40px; margin-bottom: 8px; }
+.vtop p { color: var(--muted); margin: 0; max-width: 560px; line-height: 1.6; }
+.vtop-actions { display: flex; gap: 10px; }
+
+@media (max-width: 900px) {
+  .vshell { grid-template-columns: 1fr; }
+  .vside { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 16px 20px; }
+  .vnav { flex-direction: row; overflow-x: auto; order: 3; width: 100%; }
+  .vnav a { padding: 10px 14px; border-left: 0; border-bottom: 3px solid transparent; white-space: nowrap; }
+  .vnav a.is-current { border-bottom-color: var(--champagne); }
+  .vside-foot { margin: 0 0 0 auto; flex-direction: row; align-items: center; gap: 14px; }
+  .vbusiness { border: 0; padding: 0; flex-direction: row; align-items: center; }
+  .vbusiness strong { display: none; }
+  .vside-foot a { display: none; }
+  .vmain { padding: 30px 20px 80px; }
+  .vtop h1 { font-size: 32px; }
+}

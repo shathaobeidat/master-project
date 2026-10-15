@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan your event | Fiesta</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/planner.css">
+</head>
+<body>
+  <main id="main" class="planner-page">
+    <aside class="planner-aside">
+      <a class="brand planner-brand" href="index.html" aria-label="Fiesta home"><span>f</span>fiesta.</a>
+      <div>
+        <div class="eyebrow light">Plan your celebration</div>
+        <h1>Let’s make something<br><em>beautiful.</em></h1>
+        <p>A few thoughtful details will help us curate your perfect team.</p>
+      </div>
+      <small>Your plans save automatically in this demo.</small>
+    </aside>
+    <div class="planner-form" id="planner-form">
+      <div class="progress">
+        <span id="progress-label">Step 1 of 3</span>
+        <div id="progress-bars"><i class="filled"></i><i></i><i></i></div>
+      </div>
+
+      <section class="form-step" data-step="1">
+        <div class="eyebrow">The essentials</div>
+        <h2 tabindex="-1">Tell us about your event</h2>
+        <p>Start with the what, when and where. You can refine everything later.</p>
+        <label>What are you celebrating?
+          <select id="f-type" aria-describedby="form-error"></select>
+        </label>
+        <div class="two-fields">
+          <label>Event date<input type="date" id="f-date" aria-describedby="form-error"></label>
+          <label>Governorate<select id="f-governorate" aria-describedby="form-error"></select></label>
+          <label>From<input type="time" id="f-from" aria-describedby="form-error"></label>
+          <label>To<input type="time" id="f-to" aria-describedby="form-error"></label>
+        </div>
+        <label>Expected guests
+          <select id="f-guests"><option>Under 50</option><option>50–100</option><option>100–200</option><option>200+</option></select>
+        </label>
+      </section>
+
+      <section class="form-step" data-step="2" hidden>
+        <div class="eyebrow">Browse and request</div>
+        <h2 tabindex="-1">Choose services and themes</h2>
+        <p id="step2-intro">Everything here fits your event. Request the services you want and pick a theme.</p>
+        <div class="context-row">
+          <span class="context-pill" id="context-pill"></span>
+          <button type="button" class="text-link" id="edit-details">Edit in step 1</button>
+        </div>
+        <div class="chip-filter" id="category-chips" role="group" aria-label="Filter by category"></div>
+        <div class="selection-bar" id="selection-bar" role="status"></div>
+        <div id="picker"></div>
+      </section>
+
+      <section class="form-step" data-step="3" hidden>
+        <div class="eyebrow">Your starting point</div>
+        <h2 tabindex="-1">Your celebration, at a glance</h2>
+        <p>Check the details below. Sending creates one request per service, and each vendor confirms or declines it.</p>
+        <div class="summary-card" id="summary-card"></div>
+        <div id="summary-items"></div>
+      </section>
+
+      <div class="form-error" id="form-error" role="alert" hidden></div>
+      <div class="form-actions">
+        <button type="button" class="button button-ghost is-hidden" id="btn-back">Back</button>
+        <button type="button" class="button button-primary" id="btn-next">Continue</button>
+      </div>
+    </div>
+  </main>
+  <script src="js/shared/data.js"></script>
+  <script src="js/shared/icons.js"></script>
+  <script src="js/shared/store.js"></script>
+  <script src="js/shared/utils.js"></script>
+  <script src="js/shared/components.js"></script>
+  <script src="js/shared/layout.js"></script>
+  <script src="js/pages/planner.js"></script>
+</body>
+</html>

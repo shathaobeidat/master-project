@@ -1,0 +1,45 @@
+.align-left { text-align: left; max-width: 1200px; padding-left: 32px; }
+.cart-page { max-width: 1260px; padding: 0 32px 100px; margin: auto; }
+.cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 65px; }
+.cart-item { display: grid; grid-template-columns: 150px 1fr auto; gap: 25px; align-items: center; padding: 20px 0; border-top: 1px solid var(--line); }
+.cart-item img { width: 150px; height: 120px; object-fit: cover; }
+.cart-item small { color: var(--rose); text-transform: uppercase; letter-spacing: 1px; }
+.cart-item h2 { color: var(--plum); margin: 7px 0; }
+.cart-item p { color: var(--muted); font-size: 13px; }
+.cart-item button { background: none; border: 0; color: var(--rose); text-decoration: underline; font-size: 12px; }
+.cart-item > strong { color: var(--plum); font: 500 23px "Playfair Display"; }
+.total-card { background: var(--paper); padding: 28px; height: fit-content; }
+.total-card h2 { color: var(--plum); font-size: 28px; }
+.total-card > div { display: flex; justify-content: space-between; padding: 10px 0; color: var(--muted); }
+.total-card hr { border: 0; border-top: 1px solid var(--line); }
+.total-card .grand-total { color: var(--plum); font-weight: 600; font-size: 17px; }
+.total-card p { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.total-card .button { width: 100%; }
+.cart-heading { font: 500 26px "Playfair Display", serif; color: var(--plum); margin-bottom: 14px; display: flex; gap: 10px; align-items: center; }
+.cart-heading span { font: 600 12px "DM Sans", sans-serif; background: var(--blush); border-radius: 99px; padding: 3px 9px; }
+.cart-item h3 { color: var(--plum); font: 500 22px "Playfair Display", serif; margin: 7px 0; }
+.cart-hint { color: var(--muted); background: var(--paper); padding: 22px; margin-bottom: 20px; line-height: 1.6; }
+.cart-problem { color: var(--error-text) !important; background: var(--error-bg); padding: 8px 10px; margin-top: 8px; line-height: 1.5; }
+.sent-banner { display: flex; gap: 14px; align-items: flex-start; background: var(--success-tint); color: var(--success); padding: 16px 18px; margin-bottom: 30px; line-height: 1.5; }
+.sent-banner svg { flex: none; margin-top: 1px; }
+.requests-section { margin-top: 70px; }
+.request-side { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.request-help { margin-top: 6px; }
+.total-card h2 { margin-bottom: 8px; }
+.total-card .event-details { margin: 0 0 14px; }
+.total-card .event-details > div { display: flex; justify-content: space-between; gap: 14px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.total-card .event-details dd { margin: 0; color: var(--ink); font-weight: 600; text-align: right; }
+.total-card .details-missing { font-size: 13px; margin-bottom: 14px; }
+.total-card .text-link { padding-bottom: 0; }
+.total-card .button { margin-top: 4px; }
+.total-card > hr { margin: 18px 0; }
+
+@media (max-width: 700px) {
+  /* In the source the mobile .page-hero padding comes later than .align-left
+     and therefore wins; components.css now loads before this file. */
+  .align-left { padding-left: 20px; }
+  .cart-layout { grid-template-columns: 1fr; }
+  .cart-item { grid-template-columns: 90px 1fr; }
+  .cart-item img { width: 90px; height: 90px; }
+  .cart-item > strong, .cart-item > .request-side { grid-column: 2; align-items: flex-start; }
+}

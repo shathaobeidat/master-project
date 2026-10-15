@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Fiesta vendor | Fiesta</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/become-vendor.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="bv-hero">
+      <div>
+        <div class="eyebrow">For event professionals</div>
+        <h1>Your craft deserves<br>to be discovered.</h1>
+        <p>Showcase your work, manage your availability and connect with clients who value what you do.</p>
+        <div class="bv-actions">
+          <a class="button button-primary" href="#apply">Apply to join <span data-icon="arrow"></span></a>
+          <a class="button button-secondary" href="vendor-dashboard.html">Vendor dashboard</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1760401697752-ab723885ff27?auto=format&fit=crop&w=900&q=85" alt="Artisan floral wedding cake">
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><div class="eyebrow">Why join Fiesta</div><h2>Built for people who make moments</h2></div>
+        <a class="text-link" href="vendor-dashboard.html">Already a vendor? Log in <span data-icon="arrow"></span></a>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit"><span>01</span><h3>Be discovered</h3><p>A beautiful profile puts your portfolio in front of hosts who are planning their next celebration.</p></article>
+        <article class="benefit"><span>02</span><h3>Stay in control</h3><p>Share your availability and packages, and respond to requests when it suits you.</p></article>
+        <article class="benefit"><span>03</span><h3>Book with clarity</h3><p>Clients send one clear, coordinated request, so every detail is settled well before the day.</p></article>
+      </div>
+    </section>
+
+    <section class="section bv-apply-section" id="apply">
+      <div class="bv-apply">
+        <aside class="apply-aside">
+          <div>
+            <div class="eyebrow light">What happens next</div>
+            <h2>Three simple steps to go live.</h2>
+            <div class="apply-steps">
+              <div><span>01</span><div><strong>Share your work</strong><p>Tell us about your business and what you create.</p></div></div>
+              <div><span>02</span><div><strong>We take a look</strong><p>Our team reviews every application for quality and fit.</p></div></div>
+              <div><span>03</span><div><strong>Go live</strong><p>Your profile appears in the marketplace for hosts to discover.</p></div></div>
+            </div>
+          </div>
+          <small>This is a demo application. Nothing is sent to anyone. Use Demo tools to approve or reject it.</small>
+        </aside>
+
+        <div class="apply-panel">
+          <form class="apply-form" id="apply-form" novalidate>
+            <div class="eyebrow">Vendor application</div>
+            <h2>Tell us about your work</h2>
+            <p class="apply-intro">A few details are enough to get started. You can refine your profile later.</p>
+
+            <label>Business name<input id="bv-name" autocomplete="organization" placeholder="e.g. Luna Floral Studio"></label>
+            <div class="apply-row">
+              <label>Service category<select id="bv-category"></select></label>
+      <label>Documents<input type="file" id="docs" ></label>
+            </div>
+           
+            <div class="apply-row">
+             <label>Email<input type="email" id="bv-email" autocomplete="email" placeholder="you@studio.com"></label>
+              <label>Years of experience<input type="number" id="bv-years" min="0" placeholder="e.g. 6"></label>
+            </div>
+            <label>Portfolio or Instagram link<input id="bv-link" placeholder="instagram.com/yourstudio"></label>
+            <label>About your work<textarea id="bv-about" placeholder="Tell us about your style and the celebrations you love to create."></textarea></label>
+            <label class="apply-check"><input type="checkbox" id="bv-terms"> I understand this is a demo and no real application is submitted.</label>
+
+            <div class="apply-error" id="apply-error" role="alert" hidden></div>
+            <div class="apply-buttons"><button type="submit" class="button button-primary" id="apply-submit">Submit application <span data-icon="arrow"></span></button><button type="button" class="button button-ghost" id="apply-cancel" hidden>Cancel</button></div>
+          </form>
+
+          <div class="apply-success" id="apply-success" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/shared/data.js"></script>
+  <script src="js/shared/icons.js"></script>
+  <script src="js/shared/store.js"></script>
+  <script src="js/shared/utils.js"></script>
+  <script src="js/shared/components.js"></script>
+  <script src="js/shared/layout.js"></script>
+  <script src="js/pages/become-vendor.js"></script>
+</body>
+</html>

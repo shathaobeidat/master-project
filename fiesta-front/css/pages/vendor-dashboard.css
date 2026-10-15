@@ -1,0 +1,13 @@
+.vstats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 34px; }
+.vstat { background: var(--paper); padding: 26px 26px 22px; display: flex; flex-direction: column; gap: 6px; border-top: 3px solid var(--plum); transition: background .2s; }
+.vstat:hover { background: var(--blush); }
+.vstat span { color: var(--muted); font-size: 13px; font-weight: 600; }
+.vstat strong { color: var(--plum); font: 500 46px/1.1 "Playfair Display", serif; }
+.vstat small { color: var(--plum); text-decoration: underline; }
+.vpanel { border: 1px solid var(--line); padding: 26px 28px; }
+.vpanel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.vpanel-head h2 { color: var(--plum); font-size: 25px; margin: 0; }
+.vrow { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 18px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+.vrow strong { display: block; color: var(--plum); }
+.vrow div span, .vrow > span { color: var(--muted); font-size: 13px; }
+@media (max-width: 900px) { .vstats { grid-template-columns: 1fr; } .vrow { grid-template-columns: 1fr; gap: 6px; } .vrow .status-pill { justify-self: start; } }

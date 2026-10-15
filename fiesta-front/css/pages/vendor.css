@@ -1,0 +1,56 @@
+.vendor-page { max-width: 1260px; margin: auto; padding: 38px 32px 100px; }
+.back-link { display: inline-block; background: none; border: 0; color: var(--muted); padding: 0 0 20px; }
+.profile-cover { height: 500px; position: relative; color: var(--white); }
+.profile-cover::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(24,10,22,.8)); }
+.profile-cover > img { width: 100%; height: 100%; object-fit: cover; }
+.profile-title { position: absolute; bottom: 38px; left: 42px; z-index: 2; }
+.profile-title span { text-transform: uppercase; letter-spacing: 1.5px; font-size: 11px; color: var(--champagne); }
+.profile-title h1 { font-size: 48px; margin: 7px 0; }
+.profile-title p { display: flex; align-items: center; gap: 6px; margin: 0; }
+.profile-heart { position: absolute; z-index: 3; right: 25px; top: 25px; border: 0; background: var(--white); color: var(--plum); display: flex; gap: 7px; align-items: center; padding: 11px 15px; }
+.profile-layout { display: grid; grid-template-columns: 1fr 370px; gap: 70px; padding-top: 60px; }
+.profile-main h2 { color: var(--plum); font-size: 32px; }
+.profile-main > p { color: var(--muted); line-height: 1.8; }
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 40px 0 55px; }
+.stats-row div { padding: 22px; border-right: 1px solid var(--line); }
+.stats-row div:last-child { border: 0; }
+.stats-row strong { display: block; color: var(--plum); font: 500 28px "Playfair Display"; }
+.stats-row span { color: var(--muted); font-size: 12px; }
+.portfolio-grid { display: grid; grid-template-columns: 1.3fr .7fr; grid-template-rows: 180px 180px; gap: 10px; margin-bottom: 55px; }
+.portfolio-grid img { width: 100%; height: 100%; object-fit: cover; }
+.portfolio-grid img:first-child { grid-row: 1 / 3; }
+blockquote { margin: 0; padding: 30px; background: var(--paper); color: var(--plum); font: 500 20px/1.6 "Playfair Display"; }
+blockquote cite { display: block; color: var(--muted); font: 12px "DM Sans"; margin-top: 18px; }
+.booking-card { padding: 28px; border: 1px solid var(--line); position: sticky; top: 110px; height: fit-content; box-shadow: var(--shadow-md); }
+.booking-card > div:first-child { display: flex; justify-content: space-between; align-items: end; margin-bottom: 25px; }
+.booking-card > div span { color: var(--muted); font-size: 12px; }
+.booking-card > div strong { color: var(--plum); font: 500 30px "Playfair Display"; }
+.booking-card label { margin-bottom: 18px; }
+.booking-card .button { width: 100%; margin-top: 10px; }
+.booking-card > small { display: block; color: var(--muted); text-align: center; margin-top: 14px; line-height: 1.5; }
+.available { background: var(--success-tint); color: var(--success); padding: 10px; display: flex; gap: 7px; align-items: center; font-size: 12px; }
+
+@media (max-width: 980px) {
+  .profile-layout { grid-template-columns: 1fr 320px; gap: 35px; }
+}
+
+@media (max-width: 700px) {
+  .profile-cover { height: 450px; }
+  .profile-title { left: 20px; bottom: 24px; }
+  .profile-title h1 { font-size: 38px; }
+  .profile-layout { grid-template-columns: 1fr; padding-top: 40px; }
+  .booking-card { position: static; }
+  .profile-main { order: 2; }
+  .stats-row { grid-template-columns: 1fr; }
+  .stats-row div { border-right: 0; border-bottom: 1px solid var(--line); }
+}
+
+.detail-list { margin: 0 0 40px; border-top: 1px solid var(--line); }
+.detail-list > div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.detail-list dt { color: var(--muted); font-size: 13px; }
+.detail-list dd { margin: 0; line-height: 1.6; }
+.detail-list .chip-row { margin: 0; }
+.detail-list .notice-tag { margin-top: 0; width: fit-content; }
+.date-problem { background: var(--error-bg); color: var(--error-text); padding: 10px 12px; font-size: 12px; line-height: 1.5; margin: 0 0 12px; }
+.vendor-note { background: var(--blush); color: var(--plum); padding: 12px; font-size: 13px; line-height: 1.5; margin: 10px 0 0; }
+@media (max-width: 700px) { .detail-list > div { grid-template-columns: 1fr; gap: 4px; } }
